@@ -7,7 +7,3 @@ def test(a, b, c, d):
 
 def test2(a: None, b: None) -> None:
     return None
-
-
-def test3():
-    return "text"
