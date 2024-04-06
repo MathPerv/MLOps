@@ -13,7 +13,7 @@ readme = "README.md"
 
 [tool.ruff]
 line-length = 88
-indent-width = 4
+indent-width = 2
 target-version = "py310"
 select = [  "A",  # prevent using keywords that clobber python builtins
             "B",  # bugbear: security warnings
@@ -35,7 +35,7 @@ fixable = [
 ]
 
 [tool.ruff.format]
-docstring-code-line-length = 60
+docstring-code-line-length = 88
 indent-style = "space"
 line-ending = "lf"
 quote-style = "double"
