@@ -1,0 +1,47 @@
+[project]
+name = "MLOps"
+version = "1.0"
+requires-python = ">=3.8"
+authors = [
+    {name = "Danil Kulibaba", email = "danil.kulibaba@ya.ru"}
+]
+maintainers = [
+    {name = "Danil Kulibaba", email = "danil.kulibaba@ya.ru"}
+]
+description = "Repository for MLOps course"
+readme = "README.md"
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py310"
+select = [  "A",  # prevent using keywords that clobber python builtins
+            "B",  # bugbear: security warnings
+            "E",  # pycodestyle
+            "F",  # pyflakes
+            "ISC",  # implicit string concatenation
+            "UP",  # alert you when better syntax is available in your python version
+            "RUF",  # the ruff developer's own rules
+]
+ignore = [
+    "E712",  # Allow using if x == False, as it's not always equivalent to if x.
+    "E501",  # Supress line-too-long warnings: trust black's judgement on this one.
+    "UP017",  # Allow timezone.utc instead of datetime.UTC.
+]
+fixable = [
+    "F401",  # Remove unused imports.
+    "NPY001",  # Fix numpy types, which are removed in 1.24.
+    "RUF100",  # Remove unused noqa comments.
+]
+
+[tool.ruff.format]
+docstring-code-line-length = 60
+indent-style = "space"
+line-ending = "lf"
+quote-style = "double"
+skip-magic-trailing-comma = true
+
+[tool.mypy]
+no_implicit_optional=true
+warn_return_any=true
+warn_unreachable=true
